@@ -33,7 +33,7 @@
   * ```va_copy``` (man 3 va_copy)
   * ```va_arg``` (man 3 va_arg)
 ## Mandatory Tasks
-- [ ] Write function that produces output with conversion specifiers ```c```, ```s```, and ```%```.
+- [x] Write function that produces output with conversion specifiers ```c```, ```s```, and ```%```.
 - [ ] Handle conversion specifiers ```d```, ```i```.
 - [ ] Create a man page for your function.
 ## Advanced Tasks
