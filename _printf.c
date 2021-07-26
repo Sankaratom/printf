@@ -2,6 +2,31 @@
 #include <stdlib.h>
 
 /**
+ * print_space - prints a space
+ *
+ * Return: always 1 (number of chars printed)
+ */
+int print_space(void)
+{
+	_putchar(' ');
+	return (1);
+}
+
+/**
+ * increment_index - increments the index of format depending on char c
+ * @c: char to determine index increment
+ * @j: number of indices that c is away from the current index
+ *
+ * Return: (j + 1) if c is a percent sign or j
+ */
+unsigned int increment_index(char c, unsigned int j)
+{
+	if (c == '%')
+		return (j + 1);
+	return (j);
+}
+
+/**
  * check_for_specifiers - checks if there is a valid format specifier
  * @format: possible format specifier
  *
@@ -71,17 +96,17 @@ int _printf(const char *format, ...)
 			;
 		if (!format[i + j])
 			return (-1);
+		if (format[i + j] == 's')
+		{
+			count += print_s(valist);
+			i += j + 1;
+			continue;
+		}
 		_putchar(format[i]);
 		count++;
 		if (j > 1 && format[i + j] != '%')
-		{
-			_putchar(' ');
-			count++;
-		}
-		if (format[i + j] == '%')
-			i += j + 1;
-		else
-			i += j;
+			count += print_space();
+		i += increment_index(format[i + j], j);
 	}
 	va_end(valist);
 	return (count);
