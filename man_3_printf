@@ -1,0 +1,20 @@
+.TH man 3 "26 July 2021" "0.10" "_printf man page"
+.SH NAME
+.B _printf
+- print anything.
+.SH SYNOPSIS
+.B #include "holberton.h"
+.B int _printf(const char *
+.I format
+.B , ...)
+.SH DESCRIPTION
+ALX Software engineering School is a project-based alternative to college for the next generation of software engineers.
+.SH OPTIONS
+.B _printf
+takes five options.
+.SH SEE ALSO
+.I printf(3)
+.SH BUGS
+Two unidentified bugs.
+.SH AUTHOR
+Yohannes Getu, Bryan Aniedi-Ekong
