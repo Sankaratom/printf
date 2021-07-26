@@ -37,8 +37,8 @@
 - [x] Handle conversion specifiers ```d```, ```i```.
 - [x] Create a man page for your function.
 ## Advanced Tasks
-- [b] Handle conversion specifier ```b```.
-- [ ] Handle conversion specifiers ```u```, ```o```, ```x```, ```X```.
+- [x] Handle conversion specifier ```b```.
+- [x] Handle conversion specifiers ```u```, ```o```, ```x```, ```X```.
 - [ ] Use a local buffer of 1024 chars in order to call write as little as possible.
 - [ ] Handle conversion specifier ```S```.
 - [ ] Handle conversion specifier ```p```.
