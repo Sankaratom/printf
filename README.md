@@ -35,7 +35,7 @@
 ## Mandatory Tasks
 - [x] Write function that produces output with conversion specifiers ```c```, ```s```, and ```%```.
 - [x] Handle conversion specifiers ```d```, ```i```.
-- [ ] Create a man page for your function.
+- [x] Create a man page for your function.
 ## Advanced Tasks
 - [ ] Handle conversion specifier ```b```.
 - [ ] Handle conversion specifiers ```u```, ```o```, ```x```, ```X```.
