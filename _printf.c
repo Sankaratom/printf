@@ -67,7 +67,7 @@ int _printf(const char *format, ...)
 		for (j = 1; format[i + j] == ' '; j++)
 			;
 		if (!format[i + j])
-			return (count);
+			return (-1);
 		_putchar(format[i]);
 		count++;
 		if (j > 1 && format[i + j] != '%')
