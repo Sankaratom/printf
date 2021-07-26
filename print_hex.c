@@ -79,6 +79,7 @@ static unsigned long _pow(unsigned int base, unsigned int exponent)
 	}
 	return (ans);
 }
+
 /**
  * print_p - prints an address
  * @p: address to print
@@ -87,15 +88,25 @@ static unsigned long _pow(unsigned int base, unsigned int exponent)
  */
 int print_p(va_list p)
 {
-	int count;
+	int count = 0;
 	unsigned int a[16];
 	unsigned int i, sum;
 	unsigned long n, m;
+	char *str = "(nil)";
 
+	n = va_arg(p, unsigned long);
+	if (n == 0)
+	{
+		for (i = 0; str[i]; i++)
+		{
+			_putchar(str[i]);
+			count++;
+		}
+		return (count);
+	}
 	_putchar('0');
 	_putchar('x');
 	count = 2;
-	n = va_arg(p, unsigned long);
 	m = _pow(16, 15); /* 16 ^ 15 */
 	a[0] = n / m;
 	for (i = 1; i < 16; i++)
