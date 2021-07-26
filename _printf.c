@@ -62,23 +62,23 @@ int _printf(const char *format, ...)
 		{
 			count += f(valist);
 			i += 2;
+			continue;
 		}
-		else
+		for (j = 1; format[i + j] == ' '; j++)
+			;
+		if (!format[i + j])
+			return (count);
+		_putchar(format[i]);
+		count++;
+		if (j > 1 && format[i + j] != '%')
 		{
-			for (j = 1; format[i + j] == ' '; j++)
-				;
-			if (format[i + j])
-			{
-				_putchar(format[i]);
-				count++;
-			}
-			else
-				return (count);
-			if (format[i + j] == '%')
-				i += j + 1;
-			else
-				i += j;
+			_putchar(' ');
+			count++;
 		}
+		if (format[i + j] == '%')
+			i += j + 1;
+		else
+			i += j;
 	}
 	va_end(valist);
 	return (count);
