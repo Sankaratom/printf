@@ -41,7 +41,7 @@
 - [x] Handle conversion specifiers ```u```, ```o```, ```x```, ```X```.
 - [x] Use a local buffer of 1024 chars in order to call write as little as possible.
 - [ ] Handle conversion specifier ```S```.
-- [ ] Handle conversion specifier ```p```.
+- [x] Handle conversion specifier ```p```.
 - [ ] Handle flag characters ```+```, space, and ```#``` for non-custom conversion specifiers.
 - [ ] Handle length modifiers ```l``` and ```h``` for non-custom conversion specifiers.
 - [ ] Handle the field width for non-custom conversion specifiers.
